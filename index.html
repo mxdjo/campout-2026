@@ -1113,6 +1113,13 @@
       }
     }
 
+    /* ── FORCE MUTE ───────────────────────────────── */
+    document.querySelectorAll('video').forEach(v => {
+      v.addEventListener('volumechange', () => {
+        if (!v.muted) v.muted = true;
+      });
+    });
+
     /* ── INIT ─────────────────────────────────────── */
     applyLang(currentLang);
     loadRate();
