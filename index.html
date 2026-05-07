@@ -389,6 +389,47 @@
     .info-box.yellow { border-top: 4px solid var(--yellow-mid); }
     .info-box.blue   { border-top: 4px solid var(--blue); }
 
+    /* ── REGISTER ───────────────────────────────────── */
+    .register-section {
+      background: linear-gradient(135deg, var(--blue-light) 0%, #fffde7 100%);
+      border-top: 3px solid var(--blue);
+      border-bottom: 3px solid var(--yellow-mid);
+      text-align: center;
+    }
+    .register-section h2 {
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 800;
+      color: var(--blue-dark);
+      margin-bottom: 12px;
+    }
+    .register-section h2 .accent { color: var(--yellow-mid); }
+    .register-section p {
+      color: var(--muted);
+      font-size: 0.97rem;
+      margin-bottom: 32px;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .register-btn {
+      display: inline-block;
+      padding: 16px 48px;
+      background: var(--blue-dark);
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.05rem;
+      font-weight: 800;
+      border-radius: 10px;
+      letter-spacing: 0.5px;
+      box-shadow: 0 4px 20px rgba(3,105,161,0.3);
+      transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+    }
+    .register-btn:hover {
+      background: var(--blue);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 32px rgba(14,165,233,0.35);
+    }
+
     /* ── CONTACT ─────────────────────────────────────── */
     .contact-bg { background: linear-gradient(160deg, var(--blue-dark) 0%, var(--blue) 100%); }
     .contact-bg .section-title h2 { color: #fff; }
@@ -633,6 +674,18 @@
     </div>
   </div>
 
+  <!-- ░░ REGISTER ░░ -->
+  <div class="register-section">
+    <div class="section">
+      <h2 data-i18n="reg_title"></h2>
+      <p data-i18n="reg_sub"></p>
+      <a class="register-btn"
+         href="https://docs.google.com/forms/d/e/1FAIpQLSe4ndtmNIZLw0hCBru69-C9SQfl7_V2_O5p90EC9FMpCd50QA/viewform?usp=header"
+         target="_blank" rel="noopener"
+         data-i18n="reg_btn"></a>
+    </div>
+  </div>
+
   <!-- ░░ CONTACT ░░ -->
   <div class="contact-bg">
     <div class="section">
@@ -744,6 +797,9 @@
         food3_name:     "Banku",
         food4_name:     "Waakye (Rice)",
         food_closing:   "🌟 Great meals, excellent ambiance, and peace of mind.",
+        reg_title:      "Ready to <span class='accent'>Join</span>?",
+        reg_sub:        "Secure your spot now — places are limited!",
+        reg_btn:        "📝 Register Now",
         contact_title:  "📞 For Enquiries",
         contact_sub:    "Reach out to any of our coordinators below.",
         footer_slogan:  "✨ Discover. Connect. Grow. Serve. ✨",
@@ -810,6 +866,9 @@
         food3_name:     "Banku",
         food4_name:     "Waakye (Riz)",
         food_closing:   "🌟 De bons repas, une excellente ambiance et l'esprit tranquille.",
+        reg_title:      "Prêt à <span class='accent'>Rejoindre</span> ?",
+        reg_sub:        "Réservez votre place maintenant — les places sont limitées !",
+        reg_btn:        "📝 S'inscrire",
         contact_title:  "📞 Renseignements",
         contact_sub:    "Contactez l'un de nos coordinateurs ci-dessous.",
         footer_slogan:  "✨ Découvrir. Connecter. Grandir. Servir. ✨",
