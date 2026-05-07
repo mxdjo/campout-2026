@@ -389,6 +389,56 @@
     .info-box.yellow { border-top: 4px solid var(--yellow-mid); }
     .info-box.blue   { border-top: 4px solid var(--blue); }
 
+    /* ── VIP MENU ───────────────────────────────────── */
+    .vip-section {
+      background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
+      border-top: 3px solid var(--yellow-mid);
+    }
+    .vip-section .section-title h2 { color: var(--yellow); }
+    .vip-section .section-title h2 .accent { color: #fff; }
+    .vip-section .section-title p { color: rgba(255,255,255,0.6); }
+    .vip-section .divider { background: linear-gradient(90deg, var(--yellow-mid), #fff); }
+    .vip-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 16px;
+    }
+    .vip-item {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(253,230,138,0.25);
+      border-radius: 12px;
+      padding: 18px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .vip-item:hover {
+      background: rgba(253,230,138,0.1);
+      border-color: var(--yellow-mid);
+    }
+    .vip-item-name {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #fff;
+      line-height: 1.4;
+      flex: 1;
+    }
+    .vip-item-price {
+      font-size: 1rem;
+      font-weight: 900;
+      color: var(--yellow);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .vip-item-usd {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.45);
+      text-align: right;
+      margin-top: 2px;
+    }
+
     /* ── REGISTER ───────────────────────────────────── */
     .register-section {
       background: linear-gradient(135deg, var(--blue-light) 0%, #fffde7 100%);
@@ -515,7 +565,7 @@
       <div class="video-card">
         <div class="video-wrapper">
           <video controls preload="metadata">
-            <source src="videos/video1.mp4" type="video/mp4" />
+            <source src="videos/the-venue.mp4" type="video/mp4" />
           </video>
         </div>
         <div class="video-info">
@@ -674,6 +724,84 @@
     </div>
   </div>
 
+  <!-- ░░ VIP MENU ░░ -->
+  <div class="vip-section">
+    <div class="section">
+      <div class="section-title">
+        <h2 data-i18n="vip_title"></h2>
+        <p data-i18n="vip_sub"></p>
+        <div class="divider"></div>
+      </div>
+      <div class="vip-grid">
+
+        <div class="vip-item">
+          <div>
+            <div class="vip-item-name" data-i18n="vip1"></div>
+            <div class="vip-item-usd" data-ghs="65">—</div>
+          </div>
+          <div class="vip-item-price">GHc 65</div>
+        </div>
+
+        <div class="vip-item">
+          <div>
+            <div class="vip-item-name" data-i18n="vip2"></div>
+            <div class="vip-item-usd" data-ghs="65">—</div>
+          </div>
+          <div class="vip-item-price">GHc 65</div>
+        </div>
+
+        <div class="vip-item">
+          <div>
+            <div class="vip-item-name" data-i18n="vip3"></div>
+            <div class="vip-item-usd" data-ghs="100">—</div>
+          </div>
+          <div class="vip-item-price">GHc 100</div>
+        </div>
+
+        <div class="vip-item">
+          <div>
+            <div class="vip-item-name" data-i18n="vip4"></div>
+            <div class="vip-item-usd" data-ghs="65">—</div>
+          </div>
+          <div class="vip-item-price">GHc 65</div>
+        </div>
+
+        <div class="vip-item">
+          <div>
+            <div class="vip-item-name" data-i18n="vip5"></div>
+            <div class="vip-item-usd" data-ghs="60">—</div>
+          </div>
+          <div class="vip-item-price">GHc 60</div>
+        </div>
+
+        <div class="vip-item">
+          <div>
+            <div class="vip-item-name" data-i18n="vip6"></div>
+            <div class="vip-item-usd" data-ghs="60">—</div>
+          </div>
+          <div class="vip-item-price">GHc 60</div>
+        </div>
+
+        <div class="vip-item">
+          <div>
+            <div class="vip-item-name" data-i18n="vip7"></div>
+            <div class="vip-item-usd" data-ghs="65">—</div>
+          </div>
+          <div class="vip-item-price">GHc 65</div>
+        </div>
+
+        <div class="vip-item">
+          <div>
+            <div class="vip-item-name" data-i18n="vip8"></div>
+            <div class="vip-item-usd" data-ghs="75">—</div>
+          </div>
+          <div class="vip-item-price">GHc 75</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
   <!-- ░░ REGISTER ░░ -->
   <div class="register-section">
     <div class="section">
@@ -797,6 +925,16 @@
         food3_name:     "Banku",
         food4_name:     "Waakye (Rice)",
         food_closing:   "🌟 Great meals, excellent ambiance, and peace of mind.",
+        vip_title:      "👑 VIP <span class='accent'>Menu</span>",
+        vip_sub:        "Premium meals available for order during the camp out.",
+        vip1:  "White rice + fried chicken or fish",
+        vip2:  "Jollof rice + fried chicken or fish",
+        vip3:  "Banku + Tilapia",
+        vip4:  "Fried rice + fried chicken",
+        vip5:  "Fried yam + fried fish",
+        vip6:  "Banku / corn dough + okra soup (crab, smoked fish, beef skin)",
+        vip7:  "Corn dough or banku + Abobi fish pepper sauce",
+        vip8:  "Fufu + white mutton soup",
         reg_title:      "Ready to <span class='accent'>Join</span>?",
         reg_sub:        "Secure your spot now — places are limited!",
         reg_btn:        "📝 Register Now",
@@ -866,6 +1004,16 @@
         food3_name:     "Banku",
         food4_name:     "Waakye (Riz)",
         food_closing:   "🌟 De bons repas, une excellente ambiance et l'esprit tranquille.",
+        vip_title:      "👑 Menu <span class='accent'>VIP</span>",
+        vip_sub:        "Des repas premium disponibles à la commande pendant le camp out.",
+        vip1:  "Riz blanc + poulet ou poisson frit",
+        vip2:  "Riz au gras + poulet ou poisson frit",
+        vip3:  "Banku + Tilapia",
+        vip4:  "Fried rice + Poulet frit",
+        vip5:  "Igname frit + poisson frit",
+        vip6:  "Banku / pâte de maïs + sauce gombo (crabe, poisson fumé, peau de bœuf)",
+        vip7:  "Pâte de maïs ou banku + piment au poisson Abobi",
+        vip8:  "Fufu + sauce blanche à la viande de mouton",
         reg_title:      "Prêt pour <span class='accent'>l'aventure</span> ?",
         reg_sub:        "Rejoignez nous, les places sont limitées !",
         reg_btn:        "📝 S'inscrire",
