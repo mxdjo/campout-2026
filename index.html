@@ -439,7 +439,7 @@
 </head>
 <body>
 
-  <button id="lang-btn">🇫🇷 FR</button>
+  <button id="lang-btn">🇬🇧 EN</button>
 
   <!-- ░░ HEADER ░░ -->
   <header>
@@ -826,7 +826,7 @@
         const key = el.getAttribute('data-i18n');
         if (T[lang][key] !== undefined) el.innerHTML = T[lang][key];
       });
-      document.getElementById('lang-btn').textContent = lang === 'en' ? '🇫🇷 FR' : '🇬🇧 EN';
+      document.getElementById('lang-btn').textContent = lang === 'en' ? '🇬🇧 EN' : '🇫🇷 FR';
       document.documentElement.lang = lang;
       currentLang = lang;
       localStorage.setItem('eck_lang', lang);
